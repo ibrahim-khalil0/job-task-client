@@ -3,16 +3,15 @@ import CustomizedTables from "../../sharedComponent/Table/Table";
 import { AuthContext } from "../../Providers/AuthProviders";
 import axios from "axios";
 
-const AllTask = () => {
-  const {user} = useContext(AuthContext)
-  const [task, setTask] = useState([])
+const Completed = () => {
+  const { user } = useContext(AuthContext);
+  const [task, setTask] = useState([]);
 
-  useEffect( () => {
-    axios(`http://localhost:5000/task/${user?.email}`)
-    .then(res => {
-      setTask(res.data)
-    })
-  }, [user])
+  useEffect(() => {
+    axios(`http://localhost:5000/task/${user?.email}`).then((res) => {
+      setTask(res.data);
+    });
+  }, [user]);
 
   return (
     <div>
@@ -21,4 +20,4 @@ const AllTask = () => {
   );
 };
 
-export default AllTask;
+export default Completed;

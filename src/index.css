@@ -26,3 +26,14 @@ h1, h2, h3{
 .active{
     color: #FC9401;
 }
+
+.dashboard .active{
+    background-color: white;
+}
+
+.dashboard a{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
+
+}

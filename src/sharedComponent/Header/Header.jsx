@@ -15,7 +15,7 @@ const Header = () => {
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/pricing'}>Pricing</NavLink>
                 <NavLink to={'/features'}>Features</NavLink>
-                <NavLink to={'/dashboard'}>Get Started</NavLink>
+                <NavLink to={'/dashboard/list'}>Get Started</NavLink>
                 {
                     user ? <a onClick={logOut} className="bg-[#FC9401] text-white px-5 py-1 rounded-lg border border-[#FC9401] hover:bg-white hover:text-[#FC9401] cursor-pointer">Logout</a>
                     : 

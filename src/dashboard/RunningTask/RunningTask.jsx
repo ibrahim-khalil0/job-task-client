@@ -1,18 +1,25 @@
-// TargetComponent.js
-import React from 'react';
-import { useDrop } from 'react-dnd';
+import React, { useContext, useEffect, useState } from "react";
+import CustomizedTables from "../../sharedComponent/Table/Table";
+import { AuthContext } from "../../Providers/AuthProviders";
+import axios from "axios";
 
-const TargetComponent = ({ onDrop }) => {
-  const [, drop] = useDrop({
-    accept: 'ITEM', // Specify the accepted type for dropped items
-    drop: (item) => onDrop(item), // Callback function when an item is dropped
-  });
+
+const RunningTask = () => {
+  const { user } = useContext(AuthContext);
+  const [task, setTask] = useState([]);
+
+  useEffect(() => {
+    axios(`http://localhost:5000/task/${user?.email}`).then((res) => {
+      setTask(res.data);
+    });
+  }, [user]);
 
   return (
-    <div ref={drop} style={{ border: '2px dashed #000', padding: '16px' }}>
-      Drop here
+    <div>
+      <CustomizedTables task={task}></CustomizedTables>
+
     </div>
   );
 };
 
-export default TargetComponent;
+export default RunningTask;
