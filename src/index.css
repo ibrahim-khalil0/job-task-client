@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    font-family: 'Playfair Display', serif;
+}
+
+a{
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3{
+    font-family: 'Playfair Display', serif;
+}
+
+.active{
+    color: #FC9401;
+}
