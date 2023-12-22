@@ -6,12 +6,12 @@ import { AuthContext } from "../../Providers/AuthProviders";
 const Header = () => {
     const {user, logOut} = useContext(AuthContext)
     return (
-        <div className="flex justify-between items-center py-3 px-[4%] sm:px-[6%] lg:px-[8%] shadow-lg shadow-gray-300">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center py-3 px-[4%] sm:px-[6%] lg:px-[8%] shadow-lg shadow-gray-300">
             <div className="flex gap-2 items-center">
                 <img src={logo} alt="" className="w-10" />
                 <h1 className="logo font-bold text-3xl text-[#FC9401]">Make Task</h1>
             </div>
-            <div className="text-right text-lg font-medium space-x-10">
+            <div className="sm:text-right text-center text-lg font-medium space-x-5 sm:space-x-10">
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/pricing'}>Pricing</NavLink>
                 <NavLink to={'/features'}>Features</NavLink>

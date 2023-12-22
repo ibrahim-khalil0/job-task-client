@@ -31,7 +31,7 @@ const PeopleType = () => {
                 <p className='text-4xl'>who use this website and get benefits</p>
             </div>
 
-            <div className='grid grid-cols-4 gap-5 pb-16'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 pb-16'>
                 {
                     peoples.map(people => <div className='bg-[#FAFBFC] p-5 rounded-md space-y-5'>
                     <img src={people.img} alt="" className='w-28 h-28' />

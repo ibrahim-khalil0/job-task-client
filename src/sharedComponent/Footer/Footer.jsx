@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 
 const Footer = () => {
     return (
-        <div className="px-[4%] sm:px-[6%] lg:px-[8%] border-t border-gray-300 mt-16 py-16 flex gap-5 items-center">
+        <div className="px-[4%] sm:px-[6%] lg:px-[8%] border-t border-gray-300 mt-16 py-16 flex flex-col lg:flex-row gap-5 items-center">
             <div className='flex-1'>
                 <h1 className='text-2xl mb-2'>Subscribe Our Newsletter</h1>
                 <form>
