@@ -9,14 +9,14 @@ const RunningTask = () => {
   const [task, setTask] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:5000/task/${user?.email}`).then((res) => {
+    axios(`https://make-task-server.vercel.app/ongoing/${user?.email}`).then((res) => {
       setTask(res.data);
     });
   }, [user]);
 
   return (
     <div>
-      <CustomizedTables task={task}></CustomizedTables>
+      <CustomizedTables task={task} setTask={setTask}></CustomizedTables>
 
     </div>
   );

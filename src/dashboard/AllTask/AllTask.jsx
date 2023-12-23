@@ -8,7 +8,7 @@ const AllTask = () => {
   const [task, setTask] = useState([])
 
   useEffect( () => {
-    axios(`http://localhost:5000/task/${user?.email}`)
+    axios(`https://make-task-server.vercel.app/task/${user?.email}`)
     .then(res => {
       setTask(res.data)
     })
@@ -16,7 +16,7 @@ const AllTask = () => {
 
   return (
     <div>
-      <CustomizedTables task={task}></CustomizedTables>
+      <CustomizedTables task={task} setTask={setTask}></CustomizedTables>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Root = () => {
             {
                 noHeaderFooter || <Header></Header>
             }
-            <div className="px-[4%] sm:px-[6%] lg:px-[8%]">
+            <div className="px-[0%] sm:px-[6%] lg:px-[8%]">
                 <Outlet></Outlet>
             </div>
             {

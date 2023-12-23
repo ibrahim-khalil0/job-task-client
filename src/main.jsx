@@ -15,6 +15,9 @@ import Dashboard from './dashboard/Dashboard/Dashboard.jsx';
 import AllTask from './dashboard/AllTask/AllTask.jsx';
 import RunningTask from './dashboard/RunningTask/RunningTask.jsx';
 import Completed from './dashboard/Completed/Completed.jsx';
+import Pricing from './pages/Pricing/Pricing.jsx';
+import Features from './pages/Features/Features.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,12 +30,16 @@ const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path: "/about",
-        element: <div>this is about</div>
+        path: "/pricing",
+        element: <Pricing></Pricing>
+      },
+      {
+        path: "/features",
+        element: <Features></Features>
       },
       {
         path: "/dashboard",
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
           {
             path: "/dashboard/list",
